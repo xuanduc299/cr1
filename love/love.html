@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <audio id="my-audio" autoplay>
+    <audio id="my-audio">
         <source src="../image/sao-hang-a-anh-trai-say-hi-HIEUTHUHAI.mp3" type="audio/mpeg">
         Trình duyệt của bạn không hỗ trợ thẻ audio.
     </audio>
@@ -50,7 +50,7 @@
             </div>
             <div class="buttonLove">
                 <div class="cricleBtn"></div>
-                <div class="button"></div>
+                <div class="button" id="play-btn"></div>
             </div>
         </div>
         <div class="boxLine">
@@ -126,12 +126,18 @@
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
+    // const audio = document.getElementById('my-audio');
+    // window.addEventListener('DOMContentLoaded', () => {
+    //     audio.volume = 0.6; // Giảm âm lượng xuống 70% (giảm 30%)
+    //     console.log(`Âm lượng đã đặt: ${audio.volume * 100}%`);
+    // });
     const audio = document.getElementById('my-audio');
+    const playButton = document.getElementById('play-btn');
 
-    // Đặt âm lượng tự động khi trang tải xong
-    window.addEventListener('DOMContentLoaded', () => {
-        audio.volume = 0.6; // Giảm âm lượng xuống 70% (giảm 30%)
-        console.log(`Âm lượng đã đặt: ${audio.volume * 100}%`);
+    playButton.addEventListener('click', () => {
+        audio.volume = 0.6; // Giảm âm lượng xuống 70%
+        audio.play(); // Bắt đầu phát nhạc
+        playButton.style.display = 'none'; // Ẩn nút sau khi nhạc phát
     });
 
 
