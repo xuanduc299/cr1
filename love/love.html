@@ -16,6 +16,11 @@
         <source src="../image/sao-hang-a-anh-trai-say-hi-HIEUTHUHAI.mp3" type="audio/mpeg">
         Trình duyệt của bạn không hỗ trợ thẻ audio.
     </audio>
+
+    <audio id="my-audio2">
+        <source src="../image/lofi2.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
     <div class="wrapper">
         <!-- <img src="../thư love.png" alt=""> -->
         <div class="formInput">
@@ -149,8 +154,14 @@
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
+
+    const audio2 = document.getElementById('my-audio2');
+    const playButton2 = document.getElementById('openNewFormButton')
     document.getElementById("openNewFormButton").addEventListener("click", function () {
         $(".wrapperNewForm").fadeIn(); // Hiển thị form ẩn mới
+        audio2.volume = 0.6; // Giảm âm lượng xuống 70%
+        audio2.play(); // Bắt đầu phát nhạc
+        playButton2.style.display = 'none'; // Ẩn nút sau khi nhạc phát
     });
 
     document.querySelector(".wrapperNewForm .fa-xmark").addEventListener("click", function () {
@@ -168,6 +179,7 @@
         audio.play(); // Bắt đầu phát nhạc
         playButton.style.display = 'none'; // Ẩn nút sau khi nhạc phát
     });
+
 
 
     $(window).on('load', function (event) {
