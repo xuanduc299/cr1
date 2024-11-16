@@ -24,7 +24,7 @@
                 <div class="handsCat">
                     <img src="../image/handsCat.png" alt="">
                 </div>
-                <h1>Chào cậu 😅</h1>
+                <h1 id="openNewFormButton">Chào cậu 😅</h1>
             </div>
             <div class="boxSlider">
                 <div class="listSlider">
@@ -126,14 +126,40 @@
             <div class="before"></div>
         </div>
     </div>
+
+
+
+
+    <div class="wrapperNewForm" style="display: none;">
+        <div class="boxNewForm">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="formContent">
+                <h2>🙄</h2>
+                <p>Cậu biết không, cấp 3 tớ được rất nhiều người thích đó nhưng mà vì va phải ánh mắt một người
+                    mà t đã chọn bỏ qua tất cả.
+                    Cậu cx từng bảo nhà cậu rất khó, tớ tin.
+                    Cậu cx chắc là ngại yeeuuu, dù cậu có lạnh lùng nhưng mà t vẫn thích cậu.
+                    Dù khó đến mấy tớ vẫn muốn bên cạnh cậu, cùng cậu vượt qua mọi khó khăn trc mắt
+                    Xin lỗi vì đã phải để cậu chờ rất lâu.
+                    Tớ không biết cậu sẽ nghĩ thế nào, nhưng tớ thật sự nghiêm túc với những gì mình nói.
+                    Tớ không hứa mọi thứ sẽ dễ dàng, nhưng tớ chắc chắn sẽ luôn ở đây, cùng cậu vượt qua tất cả.</p>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-    // const audio = document.getElementById('my-audio');
-    // window.addEventListener('DOMContentLoaded', () => {
-    //     audio.volume = 0.6; // Giảm âm lượng xuống 70% (giảm 30%)
-    //     console.log(`Âm lượng đã đặt: ${audio.volume * 100}%`);
-    // });
+    document.getElementById("openNewFormButton").addEventListener("click", function () {
+        $(".wrapperNewForm").fadeIn(); // Hiển thị form ẩn mới
+    });
+
+    document.querySelector(".wrapperNewForm .fa-xmark").addEventListener("click", function () {
+        $(".wrapperNewForm").fadeOut(); // Ẩn form ẩn mới
+    });
+
+
+
+
     const audio = document.getElementById('my-audio');
     const playButton = document.getElementById('play-btn');
 
