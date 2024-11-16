@@ -137,7 +137,7 @@ body {
 
 .boxSlider {
     position: relative;
-    margin-top: 70px;
+    margin-top: 80px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -168,17 +168,17 @@ body {
 }
 
 .left {
-    left: 100px;
+    left: 10px;
 }
 
 .right {
-    right: 100px;
+    right: 10px;
 }
 
 .listSlider {
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 220px;
     display: flex;
     overflow: hidden;
     border-radius: 10px;
