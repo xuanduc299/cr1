@@ -140,7 +140,7 @@
             <i class="fa-solid fa-xmark"></i>
             <div class="formContent">
                 <h2>🙄</h2>
-                <!-- <p>Cậu biết không, hồi cấp 3 tớ được nhiều người để ý lắm. Nhưng vì vô tình va phải ánh mắt của một
+                <p>Cậu biết không, hồi cấp 3 tớ được nhiều người để ý lắm. Nhưng vì vô tình va phải ánh mắt của một
                     người mà tớ đã chọn bỏ qua tất cả.
                     Một phần vì tớ cx ngại với cả lowkey ý với lúc đó tớ cx chưa có gì nên là tớ khumm dám kb, nt vs
                     cậu.
@@ -152,8 +152,7 @@
                     Xin lỗi vì đã để cậu phải chờ lâu như vậy.
                     Tớ không biết cậu sẽ nghĩ thế nào, nhưng tớ thật sự nghiêm túc với những lời mình nói.
                     Tớ không hứa rằng mọi thứ sẽ dễ dàng, nhưng tớ chắc chắn rằng tớ sẽ luôn ở đây, cùng cậu vượt qua
-                    tất cả.</p> -->
-                <p class="contentLetter2"></p>
+                    tất cả.</p>
             </div>
         </div>
     </div>
@@ -288,7 +287,27 @@
     const textLetterH2 = "Gửi cậu!";
     let timoutTextLetter;
 
-
+    function textCharLetter() {
+        if (indexText < textLetterH2.length) {
+            textLetter.textContent += textLetterH2[indexText];
+            indexText++;
+            setTimeout(indexText, 100);
+        }
+        else {
+            clearInterval(timoutTextLetter);
+            setTimeout(() => {
+                funcTimeoutLetterContent()
+            }, 500)
+        }
+    }
+    function funcTimeoutLetter() {
+        indexText = 0; // Reset indexText
+        textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
+        clearInterval(timoutTextLetter);
+        timoutTextLetter = setInterval(() => {
+            textCharLetter();
+        }, 200)
+    }
 
     // chữ của thư bạn muốn gửi
     let indexTextContent = 0;
@@ -306,8 +325,6 @@
 
         }
     }
-
-
     function funcTimeoutLetterContent() {
         indexTextContent = 0; // Reset indexTextContent
         textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
@@ -316,28 +333,6 @@
             textCharLetterContent();
         }, 100)
     }
-    // 2222222222222
-
-    let indexTextContent2 = 0;
-    let textLetterContent2 = document.querySelector('.contentLetter2');
-    const textLetterP2 = "Cậu biết không, hồi cấp 3 tớ được nhiều người để ý lắm. Nhưng vì vô tình va phải ánh mắt của một người mà tớ đã chọn bỏ qua tất cả. Một phần vì tớ cx ngại với cả lowkey ý với lúc đó tớ cx chưa có gì nên là tớ khumm dám kb, nt vs cậu. Cậu từng bảo nhà cậu rất khó, tớ tin điều đó. Cậu chắc cũng hơi ngại yêu, đúng không ? Dù cậu có lạnh lùng thế nào, tớ vẫn thích cậu. Dù nhiều lúc cậu thấy tớ phiền đúng không ? Tớ biết mà.Nhưng tớ cx chỉ muốn quan tâm đến cậu thôi. Tớ nghĩ, ai cũng cần một người phiền như thế trong đời, đúng không ? Dù mọi chuyện có khó khăn đến đâu, tớ vẫn muốn ở bên cậu, cùng cậu vượt qua mọi thử thách trước mắt. Xin lỗi vì đã để cậu phải chờ lâu như vậy. Tớ không biết cậu sẽ nghĩ thế nào, nhưng tớ thật sự nghiêm túc với những lời mình nói. Tớ không hứa rằng mọi thứ sẽ dễ dàng, nhưng tớ chắc chắn rằng tớ sẽ luôn ở đây, cùng cậu vượt qua tất cả.";
-
-    function textCharLetterContent2() {
-        if (indexTextContent2 < textLetterP2.length) {
-            textLetterContent2.textContent += textLetterP2[indexTextContent2];
-            indexTextContent2++;
-            setTimeout(textCharLetterContent2, 60); // Đúng tham số
-        }
-    }
-
-    function funcTimeoutLetterContent2() {
-        indexTextContent2 = 0; // Reset index
-        textLetterContent2.textContent = ''; // Xóa nội dung cũ
-        textCharLetterContent2(); // Gọi lại hàm viết chữ
-    }
-
-    // Gọi hàm để bắt đầu viết
-    funcTimeoutLetterContent2();
     //end 
     document.querySelector(".boxSlider .right").addEventListener("click", function () {
         var slider = document.querySelectorAll(".slider")
