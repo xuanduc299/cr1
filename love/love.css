@@ -201,7 +201,7 @@ body {
     position: relative;
     top: 15px;
     right: -200%;
-    width: 50%;
+    width: 62%;
     animation: boxInputHands 1s 9s forwards ease-in;
 }
 
