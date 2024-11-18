@@ -29,7 +29,7 @@
                 <div class="handsCat">
                     <img src="../image/handsCat.png" alt="">
                 </div>
-                <h1 id="openNewFormButton">Chào cậu 🐰</h1>
+                <h1>Chào cậu 🐰</h1>
             </div>
             <div class="boxSlider">
                 <div class="listSlider">
@@ -55,10 +55,22 @@
                     <img src="../image/handsCat.png" alt="">
                 </div>
                 <input type="text" id="inputField" placeholder="Nhập tên..." readonly>
+
+
             </div>
             <div class="buttonLove">
                 <div class="cricleBtn"></div>
                 <div class="button" id="play-btn"></div>
+
+            </div>
+            <div class="boxHandsInput">
+                <div class="handsCatImgInput">
+                    <img src="../image/handsCat.png" alt="">
+                </div>
+                <input type="text" id="inputField2" placeholder="Nhập mật mã">
+                <button class="custom-button" id="openNewFormButton" style="display: none;">
+                    🐰🐰🐰
+                </button>
             </div>
         </div>
         <div class="boxLine">
@@ -173,9 +185,6 @@
         $(".wrapperNewForm").fadeOut(); // Ẩn form ẩn mới
     });
 
-
-
-
     const audio = document.getElementById('my-audio');
     const playButton = document.getElementById('play-btn');
 
@@ -184,6 +193,23 @@
         audio.play(); // Bắt đầu phát nhạc
         playButton.style.display = 'none'; // Ẩn nút sau khi nhạc phát
     });
+
+
+    const inputField2 = document.getElementById('inputField2');
+    const submitButton = document.getElementById('submitButton');
+    // const formPopup = document.getElementById('formPopup');
+
+    inputField2.addEventListener('input', function () {
+        if (inputField2.value === '25122002') {
+            playButton2.style.display = 'block';
+        } else {
+            playButton2.style.display = 'none';
+        }
+    });
+
+    // submitButton.addEventListener('click', function () {
+    //     formPopup.style.display = 'block';
+    // });
 
 
 
@@ -377,6 +403,8 @@
         clearInterval(timoutTextLetterContent)
         $(".wrapperLetterForm").fadeOut()
     })
+
+
 </script>
 
 </html>

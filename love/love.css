@@ -117,7 +117,7 @@ body {
     transform-origin: top left;
     padding-top: 5px;
     color: #fff;
-    font-size: 50px;
+    font-size: 35px;
     font-family: 'Dancing Script', cursive;
     animation: textHand 1.5s 6s forwards ease-in;
 }
@@ -137,7 +137,7 @@ body {
 
 .boxSlider {
     position: relative;
-    margin-top: 80px;
+    margin-top: 70px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -887,31 +887,51 @@ body {
 
 
 #openNewFormButton {
-    /* background-color: #4CAF50; */
-    /* Màu nền */
-    color: white;
-    /* Màu chữ */
+
+    /* color: white;
+
     padding: 10px 20px;
-    /* Khoảng cách trong */
+
     border: none;
-    /* Không viền */
+
     border-radius: 5px;
-    /* Bo tròn góc */
+
     cursor: pointer;
-    /* Con trỏ chuột */
+
     font-size: 24px;
-    /* Cỡ chữ */
+
     text-align: center;
-    /* Căn giữa nội dung */
+
     display: inline-block;
-    /* Hiển thị như một nút */
+
     margin: 20px;
-    /* Khoảng cách ngoài */
-    transition: background-color 0.3s ease;
-    /* Hiệu ứng chuyển màu */
+ 
+    transition: background-color 0.3s ease; */
+
 }
 
 #openNewFormButton:hover {
     /* background-color: #45a049; */
     /* Màu khi hover */
+}
+
+
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    background-color: #ff639f;
+    border: none;
+    border-radius: 6px;
+    padding: 0px 5px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.custom-button:hover {
+    background-color: #ff4a88;
 }
